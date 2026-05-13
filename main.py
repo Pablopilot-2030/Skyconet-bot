@@ -10,7 +10,7 @@ WEBHOOK_SECRET   = os.environ.get("WEBHOOK_SECRET", "SKYCONET2024")
 
 BYBIT_BASE = "https://api.bybit.com"
 SYMBOL     = "XRPUSDT"
-CATEGORY   = "linear"   # perpetual futures
+CATEGORY   = "spot"   # spot trading 
 QTY        = "50"       # USDT por orden — ajustá según balance
 
 def bybit_sign(params: dict, secret: str) -> str:
