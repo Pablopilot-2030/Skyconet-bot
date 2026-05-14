@@ -41,7 +41,10 @@ def place_order(side: str, qty: str):
     }
 
     r = requests.post(f"{BYBIT_BASE}/v5/order/create", data=body_str, headers=headers)
-    return r.json()
+   try:
+        return r.json()
+    except ValueError:
+        return {"ok": False, "error": "invalid_json_from_bybit", "status_code": r.status_code, "body_snippet": r.text[:500]}
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
