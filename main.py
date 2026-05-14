@@ -7,7 +7,7 @@ BYBIT_API_KEY    = os.environ.get("BYBIT_API_KEY")
 BYBIT_API_SECRET = os.environ.get("BYBIT_API_SECRET")
 WEBHOOK_SECRET   = os.environ.get("WEBHOOK_SECRET", "SKYCONET2024")
 
-BYBIT_BASE  = "https://api.bybit.com"
+BYBIT_BASE  = "https://api.bytick.com"
 SYMBOL      = "XRPUSDT"
 CATEGORY    = "spot"
 QTY         = "50"
